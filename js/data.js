@@ -1,4 +1,4 @@
-[
+const icons = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -112,3 +112,14 @@
 		color: 'blue'
 	}
 ];
+
+const containerMain = document.querySelector('.main-cont');
+const select = document.getElementById("filter-select");
+
+for (let i = 0; i < icons.length; i++) {
+	containerMain.innerHTML += 
+	`<div class="card">
+	    <i class="fa-solid ${icons[i].prefix}${icons[i].name}" style="color: ${icons[i].color};"></i>
+	    <div class="icon-name">${icons[i].name}</div>
+     </div>`;
+}
